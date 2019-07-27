@@ -157,7 +157,8 @@ int main( int argc, char** argv )
         LogToBuffer( true );
     }
 
-    WriteLog( "FOnline server, version %04X-%02X.\n", SERVER_VERSION, FO_PROTOCOL_VERSION & 0xFF );
+	WriteLog( "FOnline server, version %04X-%02X.\nBased on rev. 412 Patched for FOnline: Aftertimes, by worldremaker\nRunning...\n", SERVER_VERSION, FO_PROTOCOL_VERSION & 0xFF );
+	//WriteLog("Based on rev. 412 Patched for FOnline: Aftertimes, by worldremaker\nRunning...\n");
 
     FOQuit = true;
     Script::SetLogDebugInfo( true );

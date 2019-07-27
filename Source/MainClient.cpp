@@ -125,7 +125,7 @@ int main( int argc, char** argv )
     MainWindow = new FOWindow();
 
     // Start message
-    WriteLog( "Starting FOnline (version %04X-%02X)...\n", CLIENT_VERSION, FO_PROTOCOL_VERSION & 0xFF );
+    WriteLog( "Starting FOnline (version %04X-%02X)...\nBased on rev. 412 Patched for FOnline: Aftertimes, by worldremaker\nRunning...\n", CLIENT_VERSION, FO_PROTOCOL_VERSION & 0xFF );
 
     // Create engine
     FOEngine = new FOClient();

@@ -31,7 +31,7 @@ int main( int argc, char** argv )
 
     GetClientOptions();
 
-    WriteLog( "Starting Mapper (%s)...\n", MAPPER_VERSION_STR );
+    WriteLog( "Starting Mapper of FOnline: Aftertimes (%s)...\n", MAPPER_VERSION_STR );
 
     // Create window
     MainWindow = new FOWindow();

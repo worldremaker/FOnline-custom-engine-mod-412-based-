@@ -2099,9 +2099,10 @@ void FOClient::ConsoleDraw()
         }
 
         SprMngr.DrawStr( Rect( 10, 10, MODE_WIDTH, MODE_HEIGHT ), Str::FormatBuf(
-                             "|0xFFBBBBBB FOnline %s\n"
+			"|0xFF00FF00 FOnline: Aftertimes %s\n"
                              "by Gamers for Gamers\n"
                              "version %04X-%02X beta\n\n"
+							 "Based on rev. 412\nPatched for FOnline: Aftertimes\nby worldremaker\n\n" 
                              "Traffic, bytes:\n"
                              "Send: %u\n"
                              "Receive: %u\n"
@@ -7271,7 +7272,7 @@ void FOClient::ChaDraw( bool is_reg )
         val = CLAMP( val, 0, 99 );
         char str[ 32 ];
         Str::Format( str, "%02d", val );
-        if( val < 1 || val > 10 )
+        if( val < 1 || val > 20 )
             Str::ChangeValue( str, 0x10 );
         SprMngr.DrawStr( Rect( ChaWSpecialValue, ChaX + ChaWSpecialNextX * i, ChaY + ChaWSpecialNextY * i ), str, FT_NOBREAK, COLOR_IFACE, FONT_BIG_NUM );
 

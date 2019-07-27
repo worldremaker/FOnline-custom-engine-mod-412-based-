@@ -2340,7 +2340,8 @@ void asCContext::ExecuteNext()
 			m_regs.stackPointer      = l_sp;
 			m_regs.stackFramePointer = l_fp;
 
-			int funcId = m_engine->importedFunctions[i&0xFFFF]->boundFunctionId;
+			// int funcId = m_engine->importedFunctions[i&0xFFFF]->boundFunctionId;
+			int funcId = m_engine->importedFunctions[i & ~FUNC_IMPORTED]->boundFunctionId;
 			if( funcId == -1 )
 			{
 				SetInternalException(TXT_UNBOUND_FUNCTION);

@@ -5250,6 +5250,11 @@ bool FOServer::SScriptFunc::Global_GetTimeEvent( uint num, uint& duration, Scrip
     return GetTimeEvent( num, duration, values );
 }
 
+uint FOServer::SScriptFunc::Global_GetTimeEventsByName( ScriptString& scriptName, ScriptArray* nums )
+{
+    return GetTimeEventsByName( scriptName.c_std_str(), nums );
+}
+
 bool FOServer::SScriptFunc::Global_SetTimeEvent( uint num, uint duration, ScriptArray* values )
 {
     return SetTimeEvent( num, duration, values );

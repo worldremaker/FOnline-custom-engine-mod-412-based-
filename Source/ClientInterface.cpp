@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+﻿#include "StdAfx.h"
 #include "Client.h"
 #include "Version.h"
 
@@ -3096,7 +3096,11 @@ void FOClient::AddMess( int mess_type, const char* msg )
     if( mess_type < 0 || mess_type > FOMB_VIEW )
         Str::Format( str, "%s\n", msg );
     else
-        Str::Format( str, "|%u %c |%u %s\n", str_color[ mess_type ], TEXT_SYMBOL_DOT, COLOR_TEXT, msg );
+        Str::Format( str, "|%u %s |%u %s\n", str_color[ mess_type ], "â€˘" /*TEXT_SYMBOL_DOT*/, COLOR_TEXT, msg );
+
+	// Play monitor.acm sound, Fallout/Fallout 2's "pop" sound.
+	if( mess_type != FOMB_COMBAT_RESULT)
+		SndMngr.PlaySound( "monitor" );
 
     // Time
     DateTime dt;

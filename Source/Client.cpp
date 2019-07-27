@@ -7297,7 +7297,14 @@ void FOClient::SetAction( ActionEvent act )
 
 void FOClient::AddActionBack( uint type_action, uint param0, uint param1, uint param2, uint param3, uint param4, uint param5 )
 {
-    AddActionBack( ActionEvent( type_action, param0, param1, param2, param3, param4, param5 ) );
+    /*if(type_action == sprecyzowane typy akcji razem z wariantami move i array[7])
+	{
+		u¿yæ tego SScriptFunc::Global_RunServerScript( ScriptString& func_name, int p0, int p1, int p2, ScriptString* p3, ScriptArray* p4 )
+	}
+	else
+	{*/	
+		AddActionBack( ActionEvent( type_action, param0, param1, param2, param3, param4, param5 ) );
+	//}
 }
 
 void FOClient::AddActionBack( ActionEvent act )
@@ -10181,6 +10188,14 @@ bool FOClient::SScriptFunc::Crit_IsTurnBasedTurn( CritterCl* cr )
     if( cr->IsNotValid )
         SCRIPT_ERROR_R0( "This nullptr." );
     return Self->IsTurnBased && cr->GetId() == Self->TurnBasedCurCritterId;
+}
+
+void FOClient::SScriptFunc::Crit_GetNameTextInfo( CritterCl* cr, bool& nameVisible, int& x, int& y, int& w, int& h, int& lines )
+{
+    if( cr->IsNotValid )
+        SCRIPT_ERROR_R( "This nullptr." );
+
+    cr->GetNameTextInfo( nameVisible, x, y, w, h, lines );
 }
 
 bool FOClient::SScriptFunc::Item_IsStackable( Item* item )

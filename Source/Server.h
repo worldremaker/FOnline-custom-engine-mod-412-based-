@@ -153,6 +153,7 @@ public:
     static uint   CreateTimeEvent( uint begin_second, const char* script_name, int values, uint val1, ScriptArray* val2, bool save );
     static void   TimeEventEndScriptCallback();
     static bool   GetTimeEvent( uint num, uint& duration, ScriptArray* values );
+	static uint   GetTimeEventsByName( const string& scriptName, ScriptArray* nums );
     static bool   SetTimeEvent( uint num, uint duration, ScriptArray* values );
     static bool   EraseTimeEvent( uint num );
     static void   ProcessTimeEvents();
@@ -862,6 +863,7 @@ public:
         static uint          Global_CreateTimeEventValues( uint begin_second, ScriptString& script_name, ScriptArray& values, bool save );
         static bool          Global_EraseTimeEvent( uint num );
         static bool          Global_GetTimeEvent( uint num, uint& duration, ScriptArray* data );
+		static uint          Global_GetTimeEventsByName( ScriptString& scriptName, ScriptArray* nums );
         static bool          Global_SetTimeEvent( uint num, uint duration, ScriptArray* data );
         static bool          Global_SetAnyData( ScriptString& name, ScriptArray& data );
         static bool          Global_SetAnyDataSize( ScriptString& name, ScriptArray& data, uint data_size_bytes );

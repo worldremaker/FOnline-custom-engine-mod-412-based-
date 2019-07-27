@@ -864,6 +864,7 @@ struct BindClass
     static void Global_CreateTimeEventValues()  {}
     static void Global_EraseTimeEvent()         {}
     static void Global_GetTimeEvent()           {}
+	static void Global_GetTimeEventsByName()    {}
     static void Global_SetTimeEvent()           {}
     static void Global_SetAnyData()             {}
     static void Global_SetAnyDataSize()         {}
@@ -938,6 +939,7 @@ struct BindClass
     static void Crit_get_ContourColor() {}
     static void Crit_GetMultihex()      {}
     static void Crit_IsTurnBasedTurn()  {}
+	static void Crit_GetNameTextInfo()  {}
 
     static void Item_IsStackable()    {}
     static void Item_IsDeteriorable() {}

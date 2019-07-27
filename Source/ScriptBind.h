@@ -754,6 +754,7 @@ BIND_ASSERT( engine->RegisterGlobalFunction( "uint CreateTimeEvent(uint beginSec
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool EraseTimeEvent(uint num)", asFUNCTION( BIND_CLASS Global_EraseTimeEvent ), asCALL_CDECL ) );
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool GetTimeEvent(uint num, uint& duration, uint[]@+ values)", asFUNCTION( BIND_CLASS Global_GetTimeEvent ), asCALL_CDECL ) );
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool GetTimeEvent(uint num, uint& duration, int[]@+ values)", asFUNCTION( BIND_CLASS Global_GetTimeEvent ), asCALL_CDECL ) );
+BIND_ASSERT( engine->RegisterGlobalFunction( "uint GetTimeEventsByName(string& scriptName, uint[]@+ nums)", asFUNCTION( BIND_CLASS Global_GetTimeEventsByName ), asCALL_CDECL ) );
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool SetTimeEvent(uint num, uint duration, uint[]@+ values)", asFUNCTION( BIND_CLASS Global_SetTimeEvent ), asCALL_CDECL ) );
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool SetTimeEvent(uint num, uint duration, int[]@+ values)", asFUNCTION( BIND_CLASS Global_SetTimeEvent ), asCALL_CDECL ) );
 BIND_ASSERT( engine->RegisterGlobalFunction( "bool SetAnyData(string& name, int64[]& data)", asFUNCTION( BIND_CLASS Global_SetAnyData ), asCALL_CDECL ) );
@@ -861,6 +862,7 @@ BIND_ASSERT( engine->RegisterObjectMethod( "CritterCl", "void set_ContourColor(u
 BIND_ASSERT( engine->RegisterObjectMethod( "CritterCl", "uint get_ContourColor() const", asFUNCTION( BIND_CLASS Crit_get_ContourColor ), asCALL_CDECL_OBJFIRST ) );
 BIND_ASSERT( engine->RegisterObjectMethod( "CritterCl", "uint GetMultihex() const", asFUNCTION( BIND_CLASS Crit_GetMultihex ), asCALL_CDECL_OBJFIRST ) );
 BIND_ASSERT( engine->RegisterObjectMethod( "CritterCl", "bool IsTurnBasedTurn() const", asFUNCTION( BIND_CLASS Crit_IsTurnBasedTurn ), asCALL_CDECL_OBJFIRST ) );
+BIND_ASSERT( engine->RegisterObjectMethod( "CritterCl", "void GetNameTextInfo( bool& nameVisible, int& x, int& y, int& w, int& h, int& lines )", asFUNCTION( BIND_CLASS Crit_GetNameTextInfo ), asCALL_CDECL_OBJFIRST ) );
 
 BIND_ASSERT( engine->RegisterObjectProperty( "CritterCl", "const uint Id", OFFSETOF( CritterCl, Id ) ) );
 BIND_ASSERT( engine->RegisterObjectProperty( "CritterCl", "const uint16 Pid", OFFSETOF( CritterCl, Pid ) ) );

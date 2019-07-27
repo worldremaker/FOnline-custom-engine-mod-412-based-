@@ -381,7 +381,7 @@ const char ClientSaveSignature[ 4 ] = { 'F', 'O', 0, CLIENT_SAVE_LAST };
 // Scores
 #define SCORE_SPEAKER                ( 3 )
 #define SCORE_TRADER                 ( 4 )
-#define SCORES_MAX                   ( 50 )
+#define SCORES_MAX                   ( 100 )
 #define SCORES_SEND_TIME             ( 60000 )
 #define SCORE_NAME_LEN               ( 64 )
 

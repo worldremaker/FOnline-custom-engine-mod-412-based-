@@ -3402,7 +3402,7 @@ bool FOServer::InitReal()
     STATIC_ASSERT( sizeof( Item::ItemData ) == 120 );
     STATIC_ASSERT( sizeof( SceneryCl ) == 32 );
     STATIC_ASSERT( sizeof( NpcBagItem ) == 16 );
-    STATIC_ASSERT( sizeof( CritData ) == 7404 );
+    STATIC_ASSERT( sizeof( CritData ) == 7604 );
     STATIC_ASSERT( sizeof( CritDataExt ) == 6944 );
     STATIC_ASSERT( sizeof( GameVar ) == 28 );
     STATIC_ASSERT( sizeof( Mutex ) == 44 );
@@ -3413,9 +3413,9 @@ bool FOServer::InitReal()
     STATIC_ASSERT( PROTO_ITEM_USER_DATA_SIZE == 500 );
     STATIC_ASSERT( OFFSETOF( Item, IsNotValid ) == 146 );
     STATIC_ASSERT( OFFSETOF( Critter::CrTimeEvent, Identifier ) == 12 );
-    STATIC_ASSERT( OFFSETOF( Critter, RefCounter ) == 9388 );
-    STATIC_ASSERT( OFFSETOF( Client, LanguageMsg ) == 9548 );
-    STATIC_ASSERT( OFFSETOF( Npc, Reserved ) == 9408 );
+    STATIC_ASSERT( OFFSETOF( Critter, RefCounter ) == 9588 );
+    STATIC_ASSERT( OFFSETOF( Client, LanguageMsg ) == 9748 );
+    STATIC_ASSERT( OFFSETOF( Npc, Reserved ) == 9608 );
     STATIC_ASSERT( OFFSETOF( GameVar, RefCount ) == 22 );
     STATIC_ASSERT( OFFSETOF( TemplateVar, Flags ) == 68 );
     STATIC_ASSERT( OFFSETOF( AIDataPlane, RefCounter ) == 88 );
